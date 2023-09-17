@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Selected Teams</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f2f2f2;
+        }
+        h1 {
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: #fff;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        li:hover {
+            background-color: #f2f2f2;
+        }
+        p {
+            margin: 20px 0;
+        }
+        a {
+            text-decoration: none;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Selected Teams</h1>
+    <ul>
+        {% for team_info in selected_teams_info %}
+            <li>
+                <span>League: {{ team_info.league }}</span>
+                <span>Team: {{ team_info.team.name }}</span>
+            </li>
+        {% endfor %}
+    </ul>
+    <p>Select again</p>
+    <a href="/select_teams"><button>START</button></a>
+</body>
+</html>
