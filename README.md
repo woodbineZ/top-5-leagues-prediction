@@ -13,6 +13,17 @@ Create virtual environment:
 
   python -m venv venv
 
+Activate virtual enironment:
+
+cd venv/Scripts
+
+.\Activate
+
+Navigate back:
+
+cd.. 
+
+cd..
 
   
 Install required packages:
